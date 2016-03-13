@@ -15,8 +15,6 @@ public class MergeSort {
 			int med = alist.length /2;
 			Integer[] left = Arrays.copyOfRange(alist, 0, med);
 			Integer[] right = Arrays.copyOfRange(alist, med, alist.length);
-			//System.out.println(Arrays.asList(right));
-			//System.out.println(Arrays.asList(left));
 			mergeSort(left);
 			mergeSort(right);
 			
@@ -26,13 +24,11 @@ public class MergeSort {
 			while(i < left.length && j < right.length){
 				if(left[i] < right[j]){
 					alist[k] = left[i];
-					//System.out.println(Arrays.asList(alist));
 					k++;
 					i++;
 				}
 				else{
 					alist[k] = right[j];
-					//System.out.println(Arrays.asList(alist));
 					k++;
 					j++;
 				}
